@@ -25,13 +25,13 @@ export const profile = {
 export const education = [
   {
     institution: 'Prestige Institute of Management & Research, Gwalior',
-    degree: 'BBA.LL.B (Hons)',
+    degree: 'B.B.A. LL.B. (Hons.)',
     period: '2021–2026',
     result: 'SGPA: 8.0'
   },
   {
     institution: 'Neiil World School, Morena, MP',
-    degree: 'Higher Senior Secondary (Class XII)',
+    degree: 'Senior Secondary (Class XII)',
     board: 'CBSE',
     period: '2021',
     result: '75%'
@@ -49,10 +49,7 @@ export const experiences = [
     categoryLabel: 'Criminal Justice',
     yearTheme: 'Criminal Justice at the Grassroots',
     details: [
-      'Assisted in the documentation and filing of FIRs and charge sheets.',
-      'Observed criminal investigation procedures and police interrogation techniques.',
-      'Gained practical exposure to the functioning of the criminal justice system at the grassroots level.',
-      'Learned about coordination between police authorities, legal counsel in ongoing cases.'
+      'Gained grassroots exposure to the criminal justice system, including FIR documentation, charge sheet preparation, and coordination between police authorities and legal counsel.'
     ]
   },
   {
@@ -65,10 +62,7 @@ export const experiences = [
     categoryLabel: 'Public Interest & Legal Aid',
     yearTheme: 'Legal Aid & Access to Justice',
     details: [
-      'Assisted in providing free legal aid and awareness to underprivileged and marginalized communities.',
-      'Observed court proceedings and Lok Adalats to understand the practical functioning of the legal system.',
-      'Participated in legal awareness campaigns and documentation of case files under the guidance of DLSA officers.',
-      'Gained insight into legal aid mechanisms and the implementation of welfare legislations at the grassroots level.'
+      'Supported legal-aid and awareness activities while observing court and Lok Adalat processes and learning how access-to-justice mechanisms operate at the grassroots level.'
     ]
   },
   {
@@ -81,10 +75,7 @@ export const experiences = [
     categoryLabel: 'Litigation & Court Exposure',
     yearTheme: 'High Court & Litigation Exposure',
     details: [
-      'Assisted in legal research and drafting under the guidance of a High Court advocate.',
-      'Gained practical exposure to litigation processes and High Court procedures.',
-      'Worked on a variety of legal issues and contributed to case analysis and legal opinions.',
-      'Developed understanding of court decorum, legal ethics, and client counseling techniques.'
+      'Assisted in legal research, drafting, and case analysis under the guidance of a High Court advocate, gaining supervised exposure to litigation processes, court procedures, and professional legal ethics.'
     ]
   },
   {
@@ -96,11 +87,7 @@ export const experiences = [
     category: 'public-interest',
     categoryLabel: 'Public Interest & Legal Awareness',
     details: [
-      'Participated in community outreach and legal awareness initiatives in a remote setting.',
-      'Conducted research on legal rights, public policy, and welfare schemes.',
-      'Created informative legal content to educate communities about their constitutional entitlements.',
-      'Led and contributed to awareness-building projects targeting under-informed and vulnerable populations.',
-      'Collaborated with interdisciplinary teams through virtual meetings and group sessions.'
+      'Contributed to community outreach and legal awareness initiatives, including research on constitutional entitlements, public policy, and welfare schemes for under-informed communities.'
     ]
   },
   {
@@ -112,10 +99,7 @@ export const experiences = [
     category: 'litigation',
     categoryLabel: 'Legal Drafting & Research',
     details: [
-      'Researched, drafted, and reviewed legal documents as part of a fully online internship.',
-      'Prepared joint venture agreements, sale deeds, and copyright licenses with digital oversight.',
-      'Conducted and presented research on bankruptcy frauds, and engaged in virtual legal discussions.',
-      'Demonstrated initiative, strong work ethic, and adaptability in a remote environment.'
+      'Researched, drafted, and reviewed legal documents including joint venture agreements, sale deeds, and copyright licenses, and conducted research on bankruptcy fraud matters.'
     ]
   },
   {
@@ -128,9 +112,7 @@ export const experiences = [
     category: 'research',
     categoryLabel: 'Legal Research & Writing',
     details: [
-      'Authored legal content on diverse fields, supporting Lawful Legal\'s initiatives to enhance public legal knowledge.',
-      'Completed a one-month virtual internship successfully, demonstrating dedication and agility in remote work.',
-      'Collaborated virtually with team members and mentors, gaining experience in digital legal content creation.'
+      'Authored legal content across diverse fields, contributing to public legal knowledge through digital legal content creation.'
     ]
   },
   {
@@ -143,10 +125,7 @@ export const experiences = [
     category: 'litigation',
     categoryLabel: 'Litigation & Court Exposure',
     details: [
-      'Performed legal research, drafted court documents, and assisted in case filings.',
-      'Observed and learned from ongoing court proceedings.',
-      'Supported legal professionals in preparing affidavits, notices, and fresh matters.',
-      'Gained practical understanding of civil and criminal litigation under supervision.'
+      'Supported legal research, court-document drafting, case filing, and matter preparation while gaining supervised exposure to civil and criminal litigation.'
     ]
   },
   {
@@ -159,10 +138,7 @@ export const experiences = [
     category: 'research',
     categoryLabel: 'Legal Research',
     details: [
-      'Successfully completed a one-month legal research internship.',
-      'Conducted research on various legal topics and related issues of interest.',
-      'Demonstrated strong research skills, proactive work ethic, and the ability to quickly learn new concepts.',
-      'Recognized for diligence and proactivity in professional tasks.'
+      'Completed a one-month legal research internship, conducting research on diverse legal topics and developing applied research skills.'
     ]
   },
   {
@@ -176,10 +152,8 @@ export const experiences = [
     category: 'litigation',
     categoryLabel: 'Pro Bono & Court Exposure',
     details: [
-      'Completed a month-long legal internship at NyayaSarthak (a pro bono initiative registered under the Ministry of MSME).',
-      'Prepared lists of dates and events, read case briefs, and drafted notes of various case files and legal propositions for matters pending in the Delhi High Court and Supreme Court of India.',
-      'Assisted with legal research on Indian Contract Act, 1872; Constitutional Law; and provisions under CPC, BNSS, and BNS.',
-      'Demonstrated strong attention to deadlines, reliability, and dedication to assigned legal tasks.'
+      'Conducted legal research and prepared case chronology and briefing notes for matters involving the Delhi High Court and Supreme Court of India, under professional supervision.',
+      'Assisted with research on Indian Contract Act, 1872; Constitutional Law; and provisions under CPC, BNSS, and BNS.'
     ]
   },
   {
@@ -193,10 +167,7 @@ export const experiences = [
     category: 'research',
     categoryLabel: 'Legal Research & Drafting',
     details: [
-      'Successfully completed a focused internship training on Legal Research and Drafting, designed for future legal professionals.',
-      'Conducted research on several legal issues and authored research papers during the tenure.',
-      'Solved practical-based legal questions and drafted judgments and various legal documents as required.',
-      'Demonstrated punctuality, hard work, and inquisitiveness; recommended by supervisors as an asset to any legal institution.'
+      'Completed a focused internship in legal research and drafting, including authoring research papers, solving practical legal questions, and drafting judgments and legal documents.'
     ]
   },
   {
@@ -209,9 +180,7 @@ export const experiences = [
     category: 'public-interest',
     categoryLabel: 'Legal Awareness',
     details: [
-      'Completed a one-month virtual internship focused on legal awareness through research-based legal drafting.',
-      'Contributed to legal advocacy and public education on legal matters.',
-      'Successfully fulfilled all internship requirements under the supervision of the Nyayavani Foundation legal team.'
+      'Completed a one-month virtual internship focused on legal awareness through research-based legal drafting and public education on legal matters.'
     ]
   },
   {
@@ -224,9 +193,7 @@ export const experiences = [
     categoryLabel: 'Regulatory Exposure',
     yearTheme: 'Competition & Securities Regulation',
     details: [
-      'Assisted in research on competition law, antitrust regulations, and market dominance issues.',
-      'Analysed cases relating to abuse of dominant position, cartels, and merger control.',
-      'Supported preparation of case briefs and legal notes under the Competition Act, 2002.'
+      'Assisted in research on competition law and antitrust regulation, including analysis of cases relating to abuse of dominant position, cartels, and merger control under the Competition Act, 2002.'
     ]
   },
   {
@@ -238,10 +205,7 @@ export const experiences = [
     category: 'regulatory',
     categoryLabel: 'Regulatory Exposure',
     details: [
-      'Conducted legal research on securities laws including insider trading and market regulation.',
-      'Analyzed judgments of the Supreme Court and Securities Appellate Tribunal (SAT).',
-      'Assisted in preparing case briefs and research notes on SEBI regulations.',
-      'Studied regulatory framework including PIT Regulations and Takeover Code.'
+      'Conducted legal research on securities laws \u2014 including insider trading, PIT Regulations, and Takeover Code \u2014 and assisted in preparing case briefs and research notes involving Supreme Court and SAT judgments.'
     ]
   }
 ];
@@ -305,8 +269,8 @@ export const publications = [
     title: 'The Role of AI Surveillance: Does It Threaten the Right to Privacy?',
     platform: 'LawfulLegal.in',
     date: 'June 2025',
-    category: 'ai-law',
-    categoryLabel: 'AI & Privacy',
+    category: 'technology-law',
+    categoryLabel: 'Technology & Law',
     url: 'https://lawfullegal.in/the-role-of-ai-surveillance-does-it-threaten-the-right-to-privacy/'
   },
   {
@@ -332,8 +296,8 @@ export const publications = [
     title: 'Criminal Liability of AI Developers for AI-Generated Crimes',
     platform: 'The Amikus Qriae',
     date: 'September 2025',
-    category: 'ai-law',
-    categoryLabel: 'AI & Criminal Law',
+    category: 'technology-law',
+    categoryLabel: 'Technology & Law',
     type: 'Research Publication',
     url: 'https://theamikusqriae.com/criminal-liability-of-ai-developers-for-ai-generated-crimes/'
   },
@@ -354,7 +318,7 @@ export const publicationCategories = [
   { id: 'constitutional-law', label: 'Constitutional Law' },
   { id: 'human-rights', label: 'Human Rights' },
   { id: 'data-privacy', label: 'Data Privacy' },
-  { id: 'ai-law', label: 'AI & Law' },
+  { id: 'technology-law', label: 'Technology & Law' },
   { id: 'financial-regulation', label: 'Financial Regulation' },
   { id: 'criminal-law', label: 'Criminal Law' },
   { id: 'matrimonial-law', label: 'Matrimonial Law' }
@@ -509,27 +473,27 @@ export const pillarsData = {
     title: 'Research',
     evidence: [
       '10 published legal articles across multiple platforms',
-      '3 authored conference/seminar papers',
+      '3 authored paper presentations at seminars and conferences',
       'Research internships at AGISS, Amikus Qriae, Lawful Legal',
       'Certified Legal Researcher — Manupatra',
-      'Research spanning Constitutional Law, AI & Law, Data Privacy, Human Rights, Financial Regulation'
+      'Research areas: Constitutional Law, Technology & Law, Data Privacy, Human Rights, Financial Regulation'
     ]
   },
   advocacy: {
     title: 'Advocacy',
     evidence: [
-      'High Court litigation exposure — Gwalior Bench',
-      'Civil & criminal litigation at Chaturvedi & Associates',
+      'High Court litigation exposure — Gwalior Bench (supervised)',
+      'Civil & criminal litigation at Chaturvedi & Associates (supervised)',
       'Moot court participation — Intra & National level',
       'Trial advocacy participation',
-      'Legal drafting for Patna High Court matters',
-      'Supreme Court research under Advocate Manik Goyal'
+      'Legal drafting for Patna High Court matters (remote)',
+      'Research on Supreme Court matters under Advocate Manik Goyal'
     ]
   },
   justice: {
     title: 'Justice',
     evidence: [
-      'DLSA — Free legal aid to underprivileged communities',
+      'DLSA — Legal aid and awareness activities',
       'Lok Adalat observation and legal awareness campaigns',
       'Nyayavani Foundation — Legal awareness through research',
       'Hikmat Helping Hands — Constitutional rights education',
