@@ -473,7 +473,7 @@ export const pillarsData = {
     title: 'Research',
     evidence: [
       '10 published legal articles across multiple platforms',
-      '3 authored paper presentations at seminars and conferences',
+      '3 paper presentations across academic seminars and conferences',
       'Research internships at AGISS, Amikus Qriae, Lawful Legal',
       'Certified Legal Researcher — Manupatra',
       'Research areas: Constitutional Law, Technology & Law, Data Privacy, Human Rights, Financial Regulation'
@@ -487,7 +487,7 @@ export const pillarsData = {
       'Moot court participation — Intra & National level',
       'Trial advocacy participation',
       'Legal drafting for Patna High Court matters (remote)',
-      'Research on Supreme Court matters under Advocate Manik Goyal'
+      'Legal research on matters involving the Delhi High Court and Supreme Court of India'
     ]
   },
   justice: {
@@ -497,7 +497,7 @@ export const pillarsData = {
       'Lok Adalat observation and legal awareness campaigns',
       'Nyayavani Foundation — Legal awareness through research',
       'Hikmat Helping Hands — Constitutional rights education',
-      'Pro bono legal work through NyayaSarthak',
+      'Legal research exposure through the pro bono initiative NyayaSarthak',
       'Commitment to integrity and pursuit of justice'
     ]
   }
