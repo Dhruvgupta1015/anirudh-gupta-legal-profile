@@ -1,0 +1,268 @@
+/* ============================================================
+   RESPONSIVE — Mobile-adaptive layouts
+   ============================================================
+   Breakpoints:
+   - 1200px: Standard laptop
+   - 1024px: Tablet landscape
+   - 768px: Tablet portrait
+   - 480px: Mobile
+   ============================================================ */
+
+@media (max-width: 1200px) {
+  :root {
+    --text-hero: 4.5rem;
+    --text-5xl: 3rem;
+    --text-4xl: 2.5rem;
+    --section-pad: 6rem;
+  }
+
+  .hero__portrait-frame {
+    width: 360px;
+    height: 460px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --text-hero: 3.5rem;
+    --text-5xl: 2.5rem;
+    --text-4xl: 2rem;
+    --text-3xl: 1.75rem;
+  }
+
+  /* Navigation */
+  .site-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .hero__portrait-wrapper {
+    justify-content: center;
+    order: -1;
+  }
+
+  .hero__portrait-frame {
+    width: 300px;
+    height: 380px;
+  }
+
+  .hero__content {
+    text-align: center;
+  }
+
+  .hero__description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__secondary-actions {
+    margin-left: 0;
+  }
+
+  .hero__grid-line {
+    display: none;
+  }
+
+  /* Profile */
+  .profile__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  /* Evidence */
+  .evidence__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Pillars */
+  .pillars__visual {
+    display: none;
+  }
+
+  .pillars__stacked {
+    display: block;
+  }
+
+  /* Contact */
+  .contact__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  /* Advocacy */
+  .advocacy__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Credentials */
+  .credentials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .site-footer__inner {
+    flex-direction: column;
+    gap: var(--space-6);
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --text-hero: 3rem;
+    --text-5xl: 2.25rem;
+    --text-4xl: 1.75rem;
+    --text-3xl: 1.5rem;
+    --text-2xl: 1.375rem;
+    --section-pad: 4rem;
+    --gutter: 1.25rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: var(--space-24) 0 var(--space-16);
+  }
+
+  .hero__portrait-frame {
+    width: 250px;
+    height: 320px;
+  }
+
+  /* Publication entries go single column */
+  .pub-entry {
+    grid-template-columns: auto 1fr;
+  }
+
+  .pub-entry__link {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  /* Leadership entries stack */
+  .leadership-entry {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  /* Featured research */
+  .featured-research__headline {
+    font-size: var(--text-3xl);
+  }
+
+  .featured-research__decoration {
+    font-size: 140px;
+    right: -5%;
+  }
+
+  /* Contact methods full width */
+  .contact-method {
+    padding: var(--space-5) var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --text-hero: 2.5rem;
+    --text-5xl: 2rem;
+    --text-4xl: 1.5rem;
+    --text-3xl: 1.375rem;
+    --text-2xl: 1.25rem;
+    --section-pad: 3rem;
+    --gutter: 1rem;
+  }
+
+  .hero__portrait-frame {
+    width: 200px;
+    height: 260px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__secondary-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .evidence__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .evidence-card {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .evidence-card__value {
+    font-size: var(--text-2xl);
+  }
+
+  .filter-bar {
+    gap: var(--space-1);
+  }
+
+  .filter-pill {
+    font-size: 10px;
+    padding: var(--space-1) var(--space-3);
+  }
+
+  .pub-entry {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .pub-entry__index {
+    font-size: var(--text-lg);
+  }
+
+  .featured-research__decoration {
+    display: none;
+  }
+
+  .featured-research__links {
+    flex-direction: column;
+  }
+
+  .mobile-menu__link {
+    font-size: var(--text-xl);
+  }
+
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-3);
+  }
+
+  .contact-method__external {
+    margin-left: 0;
+  }
+
+  .site-footer__links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

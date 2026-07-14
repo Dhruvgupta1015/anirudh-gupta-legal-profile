@@ -1,0 +1,126 @@
+/**
+ * Three Pillars — Interactive SVG triangular relationship visual
+ */
+
+import { pillarsData } from './data.js';
+
+export function initPillars() {
+  // Desktop SVG interaction
+  const nodes = document.querySelectorAll('.pillars__node');
+  const panel = document.querySelector('.pillars__evidence-panel');
+  const panelTitle = document.querySelector('.pillars__evidence-title');
+  const panelList = document.querySelector('.pillars__evidence-list');
+  const lines = document.querySelectorAll('.pillars__line');
+
+  if (nodes.length && panel) {
+    nodes.forEach(node => {
+      node.addEventListener('mouseenter', () => showEvidence(node));
+      node.addEventListener('focus', () => showEvidence(node));
+      node.addEventListener('mouseleave', () => hideEvidence());
+      node.addEventListener('blur', () => hideEvidence());
+      node.addEventListener('click', () => toggleEvidence(node));
+    });
+
+    // Keyboard support
+    nodes.forEach(node => {
+      node.setAttribute('tabindex', '0');
+      node.setAttribute('role', 'button');
+      node.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleEvidence(node);
+        }
+      });
+    });
+  }
+
+  let activeNode = null;
+  let locked = false;
+
+  function showEvidence(node) {
+    if (locked) return;
+    const key = node.getAttribute('data-pillar');
+    const data = pillarsData[key];
+    if (!data) return;
+
+    // Update panel
+    panelTitle.textContent = data.title;
+    panelList.innerHTML = data.evidence
+      .map(item => `<li class="pillars__evidence-item">${item}</li>`)
+      .join('');
+
+    // Show panel
+    panel.classList.add('visible');
+
+    // Highlight node
+    nodes.forEach(n => n.classList.remove('active'));
+    node.classList.add('active');
+
+    // Highlight connected lines
+    lines.forEach(line => {
+      const connects = line.getAttribute('data-connects');
+      if (connects && connects.includes(key)) {
+        line.classList.add('active');
+      } else {
+        line.classList.remove('active');
+      }
+    });
+  }
+
+  function hideEvidence() {
+    if (locked) return;
+    panel.classList.remove('visible');
+    nodes.forEach(n => n.classList.remove('active'));
+    lines.forEach(l => l.classList.remove('active'));
+  }
+
+  function toggleEvidence(node) {
+    if (locked && activeNode === node) {
+      locked = false;
+      hideEvidence();
+      activeNode = null;
+    } else {
+      locked = true;
+      activeNode = node;
+      showEvidence(node);
+    }
+  }
+
+  // Mobile stacked accordions
+  const stackedItems = document.querySelectorAll('.pillars__stacked-item');
+  stackedItems.forEach(item => {
+    const header = item.querySelector('.pillars__stacked-header');
+    if (header) {
+      header.addEventListener('click', () => {
+        const isExpanded = item.classList.contains('expanded');
+        // Close all
+        stackedItems.forEach(i => i.classList.remove('expanded'));
+        // Toggle clicked
+        if (!isExpanded) {
+          item.classList.add('expanded');
+        }
+      });
+
+      header.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          header.click();
+        }
+      });
+    }
+  });
+
+  // Animate SVG lines on scroll
+  const svgContainer = document.querySelector('.pillars__visual');
+  if (svgContainer) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          svgContainer.classList.add('animated');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(svgContainer);
+  }
+}
