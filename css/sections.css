@@ -666,6 +666,16 @@
   gap: var(--space-6);
 }
 
+.advocacy-entry {
+  padding: var(--space-6) 0;
+  border-bottom: var(--border-subtle);
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.advocacy-entry:hover {
+  opacity: 0.85;
+}
+
 /* --- LEADERSHIP --- */
 .leadership {
   padding: var(--section-pad) 0;
@@ -680,6 +690,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-4);
+}
+
+.credential-entry {
+  padding: var(--space-6) 0;
+  border-bottom: var(--border-subtle);
 }
 
 /* --- CONTACT --- */
@@ -714,6 +729,17 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+}
+
+/* --- Contact Method --- */
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-6) 0;
+  border-bottom: var(--border-subtle);
+  transition: all var(--duration-base) var(--ease-out);
+  text-decoration: none;
 }
 
 /* --- FOOTER --- */
