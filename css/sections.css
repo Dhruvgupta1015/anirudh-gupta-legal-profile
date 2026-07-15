@@ -234,7 +234,8 @@
 .hero__portrait-wrapper {
   position: relative;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .hero__portrait-frame {
@@ -278,10 +279,10 @@
 }
 
 .hero__portrait-meta {
-  position: absolute;
-  top: var(--space-5);
-  left: var(--space-5);
-  z-index: 3;
+  position: relative;
+  margin-top: var(--space-4);
+  max-width: 420px;
+  text-align: right;
 }
 
 .hero__portrait-meta span {
@@ -291,7 +292,7 @@
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(247, 245, 240, 0.6);
+  color: var(--ink-70);
   line-height: 2;
 }
 

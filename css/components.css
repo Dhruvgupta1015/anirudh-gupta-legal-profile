@@ -463,15 +463,14 @@
 
 /* --- Advocacy Entry --- */
 .advocacy-entry {
-  padding: var(--space-6);
-  border: var(--border-subtle);
-  border-radius: var(--radius-sm);
+  padding: var(--space-6) 0;
+  border-bottom: var(--border-subtle);
   margin-bottom: var(--space-4);
-  transition: border-color var(--duration-fast) var(--ease-out);
+  transition: opacity var(--duration-fast) var(--ease-out);
 }
 
 .advocacy-entry:hover {
-  border-color: var(--soft-steel-light);
+  opacity: 0.85;
 }
 
 .advocacy-entry__name {
@@ -545,14 +544,13 @@
 
 /* --- Credential Entry --- */
 .credential-entry {
-  padding: var(--space-6);
-  border: var(--border-subtle);
-  border-radius: var(--radius-sm);
-  transition: border-color var(--duration-fast) var(--ease-out);
+  padding: var(--space-6) 0;
+  border-bottom: var(--border-subtle);
+  transition: opacity var(--duration-fast) var(--ease-out);
 }
 
 .credential-entry:hover {
-  border-color: var(--soft-steel-light);
+  opacity: 0.85;
 }
 
 .credential-entry__title {
