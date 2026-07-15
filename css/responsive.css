@@ -261,6 +261,14 @@
     flex-direction: column;
   }
 
+  .featured-research__links .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+    padding: var(--space-4);
+  }
+
   .mobile-menu__link {
     font-size: var(--text-xl);
   }

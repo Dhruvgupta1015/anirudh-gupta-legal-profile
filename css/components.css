@@ -286,6 +286,10 @@
   background-color: var(--cobalt-soft);
 }
 
+.experience-entry__header-main {
+  min-width: 0;
+}
+
 .experience-entry__org {
   font-family: var(--font-sans);
   font-size: var(--text-base);

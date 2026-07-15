@@ -33,7 +33,7 @@ export function initJourney() {
         html += `
           <div class="experience-entry">
             <div class="experience-entry__header">
-              <div>
+              <div class="experience-entry__header-main">
                 <div class="experience-entry__org">${exp.organisation}</div>
                 ${subtitleHtml}
                 <div class="experience-entry__meta">
