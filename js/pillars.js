@@ -89,6 +89,17 @@ export function initPillars() {
   // Mobile stacked accordions
   const stackedItems = document.querySelectorAll('.pillars__stacked-item');
   stackedItems.forEach(item => {
+    // Populate data dynamically
+    const key = item.getAttribute('data-pillar');
+    if (key && pillarsData[key]) {
+      const ul = item.querySelector('.pillars__evidence-list');
+      if (ul) {
+        ul.innerHTML = pillarsData[key].evidence
+          .map(ev => `<li class="pillars__evidence-item">${ev}</li>`)
+          .join('');
+      }
+    }
+
     const header = item.querySelector('.pillars__stacked-header');
     if (header) {
       header.addEventListener('click', () => {

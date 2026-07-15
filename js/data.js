@@ -144,7 +144,7 @@ export const experiences = [
   {
     id: 9,
     organisation: 'Nyaya Sarthak',
-    subtitle: 'Under the guidance of Advocate Manik Goyal, Supreme Court',
+    subtitle: 'Under the guidance of Advocate Manik Goyal',
     role: 'Legal Intern',
     period: 'July 2025',
     year: 2025,

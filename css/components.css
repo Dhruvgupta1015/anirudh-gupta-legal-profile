@@ -409,6 +409,8 @@
   color: var(--midnight-ink);
   line-height: 1.5;
   margin-bottom: var(--space-2);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .pub-entry__meta {
@@ -480,6 +482,8 @@
   color: var(--midnight-ink);
   line-height: 1.5;
   margin-bottom: var(--space-2);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .advocacy-entry__paper {
@@ -622,6 +626,8 @@
   font-size: var(--text-md);
   font-weight: 600;
   color: var(--midnight-ink);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .contact-method__external {
