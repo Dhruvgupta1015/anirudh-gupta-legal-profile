@@ -342,7 +342,7 @@
 }
 
 .experience-entry.expanded .experience-entry__details {
-  max-height: 500px;
+  max-height: 800px;
 }
 
 .experience-entry__details-inner {
@@ -383,9 +383,6 @@
 
 .pub-entry:hover {
   background-color: var(--cobalt-soft);
-  margin: 0 calc(-1 * var(--space-4));
-  padding-left: var(--space-4);
-  padding-right: var(--space-4);
   border-radius: var(--radius-sm);
 }
 
@@ -409,8 +406,7 @@
   color: var(--midnight-ink);
   line-height: 1.5;
   margin-bottom: var(--space-2);
-  overflow-wrap: break-word;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .pub-entry__meta {
@@ -482,8 +478,7 @@
   color: var(--midnight-ink);
   line-height: 1.5;
   margin-bottom: var(--space-2);
-  overflow-wrap: break-word;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .advocacy-entry__paper {
@@ -626,8 +621,7 @@
   font-size: var(--text-md);
   font-weight: 600;
   color: var(--midnight-ink);
-  overflow-wrap: break-word;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .contact-method__external {

@@ -6,6 +6,8 @@
    - 1024px: Tablet landscape
    - 768px: Tablet portrait
    - 480px: Mobile
+   - 375px: Small mobile
+   - 320px: Extreme small
    ============================================================ */
 
 @media (max-width: 1200px) {
@@ -145,6 +147,15 @@
     height: 320px;
   }
 
+  /* Timeline — reduce left padding to reclaim space */
+  .timeline {
+    padding-left: var(--space-10);
+  }
+
+  .timeline__marker {
+    left: calc(-1 * var(--space-10));
+  }
+
   /* Publication entries go single column */
   .pub-entry {
     grid-template-columns: auto 1fr;
@@ -221,15 +232,17 @@
     font-size: var(--text-2xl);
   }
 
+  /* Filter pills — keep legible at mobile */
   .filter-bar {
     gap: var(--space-1);
   }
 
   .filter-pill {
-    font-size: 10px;
+    font-size: 11px;
     padding: var(--space-1) var(--space-3);
   }
 
+  /* Publication entries stack fully */
   .pub-entry {
     grid-template-columns: 1fr;
     gap: var(--space-3);
@@ -239,6 +252,7 @@
     font-size: var(--text-lg);
   }
 
+  /* Featured research */
   .featured-research__decoration {
     display: none;
   }
@@ -251,6 +265,29 @@
     font-size: var(--text-xl);
   }
 
+  /* Timeline — tighter left padding on narrow screens */
+  .timeline {
+    padding-left: var(--space-8);
+  }
+
+  .timeline__marker {
+    left: calc(-1 * var(--space-8));
+  }
+
+  .timeline__theme {
+    font-size: var(--text-lg);
+  }
+
+  /* Experience entry — tighter padding */
+  .experience-entry__header {
+    padding: var(--space-4) var(--space-4) var(--space-4) var(--space-5);
+  }
+
+  .experience-entry__details-inner {
+    padding: 0 var(--space-4) var(--space-4);
+  }
+
+  /* Contact method */
   .contact-method {
     flex-direction: column;
     text-align: center;
@@ -261,8 +298,88 @@
     margin-left: 0;
   }
 
+  /* Footer links wrap */
   .site-footer__links {
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+/* Small phones — iPhone SE, older devices */
+@media (max-width: 375px) {
+  :root {
+    --text-hero: 2.25rem;
+    --text-5xl: 1.75rem;
+    --text-4xl: 1.375rem;
+    --text-3xl: 1.25rem;
+  }
+
+  .hero__portrait-frame {
+    width: 180px;
+    height: 240px;
+  }
+
+  .hero__tagline {
+    font-size: var(--text-xl);
+  }
+
+  /* Evidence cards — smaller text */
+  .evidence-card__value--text {
+    font-size: var(--text-base);
+  }
+
+  /* Featured research headline */
+  .featured-research__headline {
+    font-size: var(--text-2xl);
+  }
+
+  /* Filter pills — horizontal scroll for clean presentation */
+  .filter-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: var(--space-2);
+  }
+
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-pill {
+    flex-shrink: 0;
+  }
+}
+
+/* Extreme small — 320px */
+@media (max-width: 320px) {
+  :root {
+    --text-hero: 2rem;
+    --gutter: 0.75rem;
+  }
+
+  .hero__portrait-frame {
+    width: 160px;
+    height: 210px;
+  }
+
+  .hero__status {
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+  }
+
+  /* Contact email — smaller font to avoid ugly fragmentation */
+  .contact-method__value {
+    font-size: var(--text-base);
+  }
+
+  /* Credential cards tighter */
+  .credential-entry {
+    padding: var(--space-4);
+  }
+
+  /* Section header tighter */
+  .section__header {
+    margin-bottom: var(--space-10);
   }
 }

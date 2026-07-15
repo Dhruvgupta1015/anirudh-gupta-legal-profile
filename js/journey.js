@@ -21,7 +21,9 @@ export function initJourney() {
         const exp = experiences.find(e => e.id === id);
         if (!exp) return;
         
-        const subtitleHtml = exp.subtitle ? `<div class="experience-entry__subtitle">${exp.subtitle}</div>` : '';
+        const subtitleParts = [exp.role, exp.subtitle].filter(Boolean);
+        const subtitleText = subtitleParts.join(' \u00b7 ');
+        const subtitleHtml = subtitleText ? `<div class="experience-entry__subtitle">${subtitleText}</div>` : '';
         const tagClass = exp.category === 'regulatory' ? 'tag' : 'tag tag--steel';
         
         const detailsHtml = exp.details

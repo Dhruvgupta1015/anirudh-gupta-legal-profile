@@ -10,8 +10,8 @@ import { initResearch } from './research.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
-  initAnimations();
+  initJourney();   // Must run before initAnimations — injects .reveal elements
   initPillars();
-  initJourney();
   initResearch();
+  initAnimations(); // Observes all .reveal elements — must run last
 });
