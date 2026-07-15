@@ -12,34 +12,16 @@ export function initPillars() {
   const panelList = document.querySelector('.pillars__evidence-list');
   const lines = document.querySelectorAll('.pillars__line');
 
-  if (nodes.length && panel) {
-    nodes.forEach(node => {
-      node.addEventListener('mouseenter', () => showEvidence(node));
-      node.addEventListener('focus', () => showEvidence(node));
-      node.addEventListener('mouseleave', () => hideEvidence());
-      node.addEventListener('blur', () => hideEvidence());
-      node.addEventListener('click', () => toggleEvidence(node));
-    });
+  let selectedPillar = 'research'; // Default state
+  let hoveredPillar = null;
+  let focusedPillar = null;
 
-    // Keyboard support
-    nodes.forEach(node => {
-      node.setAttribute('tabindex', '0');
-      node.setAttribute('role', 'button');
-      node.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleEvidence(node);
-        }
-      });
-    });
+  function getEffectivePillar() {
+    return focusedPillar || hoveredPillar || selectedPillar;
   }
 
-  let activeNode = null;
-  let locked = false;
-
-  function showEvidence(node) {
-    if (locked) return;
-    const key = node.getAttribute('data-pillar');
+  function renderPillarState() {
+    const key = getEffectivePillar();
     const data = pillarsData[key];
     if (!data) return;
 
@@ -49,12 +31,17 @@ export function initPillars() {
       .map(item => `<li class="pillars__evidence-item">${item}</li>`)
       .join('');
 
-    // Show panel
+    // Show panel (always visible now since we have a default state)
     panel.classList.add('visible');
 
-    // Highlight node
-    nodes.forEach(n => n.classList.remove('active'));
-    node.classList.add('active');
+    // Highlight active node
+    nodes.forEach(n => {
+      if (n.getAttribute('data-pillar') === key) {
+        n.classList.add('active');
+      } else {
+        n.classList.remove('active');
+      }
+    });
 
     // Highlight connected lines
     lines.forEach(line => {
@@ -67,23 +54,56 @@ export function initPillars() {
     });
   }
 
-  function hideEvidence() {
-    if (locked) return;
-    panel.classList.remove('visible');
-    nodes.forEach(n => n.classList.remove('active'));
-    lines.forEach(l => l.classList.remove('active'));
-  }
+  if (nodes.length && panel) {
+    const visualContainer = document.querySelector('.pillars__visual');
 
-  function toggleEvidence(node) {
-    if (locked && activeNode === node) {
-      locked = false;
-      hideEvidence();
-      activeNode = null;
-    } else {
-      locked = true;
-      activeNode = node;
-      showEvidence(node);
+    // Clear hover state only when leaving the entire interaction region
+    if (visualContainer) {
+      visualContainer.addEventListener('mouseleave', () => {
+        hoveredPillar = null;
+        renderPillarState();
+      });
     }
+
+    nodes.forEach(node => {
+      const pillarKey = node.getAttribute('data-pillar');
+
+      node.addEventListener('mouseenter', () => {
+        hoveredPillar = pillarKey;
+        renderPillarState();
+      });
+
+      // Removed node-level mouseleave to allow seamless movement to panel
+
+      node.addEventListener('focus', () => {
+        focusedPillar = pillarKey;
+        renderPillarState();
+      });
+
+      node.addEventListener('blur', () => {
+        if (focusedPillar === pillarKey) focusedPillar = null;
+        renderPillarState();
+      });
+
+      node.addEventListener('click', () => {
+        selectedPillar = pillarKey;
+        renderPillarState();
+      });
+
+      // Keyboard support
+      node.setAttribute('tabindex', '0');
+      node.setAttribute('role', 'button');
+      node.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          selectedPillar = pillarKey;
+          renderPillarState();
+        }
+      });
+    });
+
+    // Initialize default state
+    renderPillarState();
   }
 
   // Mobile stacked accordions
