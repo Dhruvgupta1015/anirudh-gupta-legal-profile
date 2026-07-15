@@ -438,6 +438,16 @@
   fill: var(--cobalt-soft);
 }
 
+.pillars__node:focus-visible {
+  outline: none;
+}
+
+.pillars__node:focus-visible .pillars__node-circle {
+  stroke: var(--cobalt);
+  stroke-width: 4;
+  fill: var(--cobalt-soft);
+}
+
 .pillars__node-label {
   font-family: var(--font-sans);
   font-size: 13px;
