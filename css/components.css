@@ -25,8 +25,6 @@
 
 .btn--primary:hover {
   background-color: var(--cobalt-hover);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
 }
 
 .btn--outline {
@@ -222,7 +220,7 @@
 
 .timeline__year {
   position: relative;
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--space-20);
 }
 
 .timeline__year:last-child {
@@ -385,13 +383,12 @@
 }
 
 .pub-entry:hover {
-  background-color: var(--cobalt-soft);
-  border-radius: var(--radius-sm);
+  border-bottom-color: var(--soft-steel-light);
 }
 
 .pub-entry__index {
   font-family: var(--font-serif);
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   font-weight: 600;
   color: var(--soft-steel-light);
   line-height: 1;
@@ -470,15 +467,15 @@
 }
 
 .advocacy-entry:hover {
-  opacity: 0.85;
+  border-bottom-color: var(--soft-steel-light);
 }
 
 .advocacy-entry__name {
   font-family: var(--font-sans);
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   font-weight: 600;
   color: var(--midnight-ink);
-  line-height: 1.5;
+  line-height: 1.4;
   margin-bottom: var(--space-2);
   overflow-wrap: anywhere;
 }
@@ -523,7 +520,7 @@
   font-family: var(--font-sans);
   font-size: var(--text-sm);
   font-weight: 600;
-  color: var(--cobalt);
+  color: var(--ink-70);
   letter-spacing: 0.05em;
   min-width: 100px;
   padding-top: 2px;
@@ -588,8 +585,6 @@
 .contact-method:hover {
   border-color: var(--cobalt);
   background-color: var(--cobalt-soft);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .contact-method__icon {
