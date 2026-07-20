@@ -91,6 +91,10 @@ img, video, svg, iframe {
     display: flex;
   }
 
+  .mobile-menu-backdrop {
+    display: block;
+  }
+
   .mobile-menu {
     display: flex;
   }

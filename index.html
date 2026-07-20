@@ -74,16 +74,24 @@
     </div>
   </header>
 
-  <!-- Mobile Menu -->
+  <div class="mobile-menu-backdrop" id="mobile-menu-backdrop" aria-hidden="true"></div>
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
-    <a href="#profile" class="mobile-menu__link" data-nav-target="profile">Profile</a>
-    <a href="#journey" class="mobile-menu__link" data-nav-target="journey">Journey</a>
-    <a href="#research" class="mobile-menu__link" data-nav-target="research">Research</a>
-    <a href="#advocacy" class="mobile-menu__link" data-nav-target="advocacy">Advocacy</a>
-    <a href="#leadership" class="mobile-menu__link" data-nav-target="leadership">Leadership</a>
-    <a href="#credentials" class="mobile-menu__link" data-nav-target="credentials">Credentials</a>
-    <a href="#contact" class="mobile-menu__link" data-nav-target="contact">Contact</a>
-    <a href="/documents/Anirudh-Gupta-CV.pdf" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top: 1rem;">View CV</a>
+    <div class="mobile-menu__header">
+      <span class="dossier-label">Menu</span>
+      <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu__nav">
+      <a href="#profile" class="mobile-menu__link" data-nav-target="profile">Profile</a>
+      <a href="#journey" class="mobile-menu__link" data-nav-target="journey">Journey</a>
+      <a href="#research" class="mobile-menu__link" data-nav-target="research">Research</a>
+      <a href="#advocacy" class="mobile-menu__link" data-nav-target="advocacy">Advocacy</a>
+      <a href="#leadership" class="mobile-menu__link" data-nav-target="leadership">Leadership</a>
+      <a href="#credentials" class="mobile-menu__link" data-nav-target="credentials">Credentials</a>
+      <a href="#contact" class="mobile-menu__link" data-nav-target="contact">Contact</a>
+      <a href="/documents/Anirudh-Gupta-CV.pdf" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top: 1rem; width: 100%; justify-content: center;">View CV</a>
+    </div>
   </div>
 
   <!-- ============================================================

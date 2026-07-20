@@ -6,6 +6,8 @@ export function initNavigation() {
   const header = document.querySelector('.site-header');
   const mobileBtn = document.querySelector('.mobile-menu-btn');
   const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileBackdrop = document.querySelector('.mobile-menu-backdrop');
+  const mobileCloseBtn = document.querySelector('#mobile-menu-close');
   const navLinks = document.querySelectorAll('[data-nav-target]');
   const sections = document.querySelectorAll('section[id]');
 
@@ -57,10 +59,18 @@ export function initNavigation() {
         closeMobileMenu();
       }
     });
+
+    if (mobileBackdrop) {
+      mobileBackdrop.addEventListener('click', closeMobileMenu);
+    }
+    if (mobileCloseBtn) {
+      mobileCloseBtn.addEventListener('click', closeMobileMenu);
+    }
   }
 
   function openMobileMenu() {
     mobileMenu.classList.add('active');
+    if (mobileBackdrop) mobileBackdrop.classList.add('active');
     mobileBtn.classList.add('active');
     document.body.style.overflow = 'hidden';
     // Focus first link
@@ -70,6 +80,7 @@ export function initNavigation() {
 
   function closeMobileMenu() {
     mobileMenu.classList.remove('active');
+    if (mobileBackdrop) mobileBackdrop.classList.remove('active');
     mobileBtn.classList.remove('active');
     document.body.style.overflow = '';
   }
