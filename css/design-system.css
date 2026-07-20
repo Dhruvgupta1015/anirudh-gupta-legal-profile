@@ -111,6 +111,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -144,6 +145,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  content-visibility: auto;
 }
 
 a {
@@ -273,21 +275,23 @@ ul, ol {
 /* --- Scroll Reveal --- */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(20px);
   transition: opacity var(--duration-reveal) var(--ease-out),
               transform var(--duration-reveal) var(--ease-out);
+  will-change: opacity, transform;
 }
 
 .reveal.revealed {
   opacity: 1;
   transform: translateY(0);
+  will-change: auto;
 }
 
-.reveal-delay-1 { transition-delay: 100ms; }
-.reveal-delay-2 { transition-delay: 200ms; }
-.reveal-delay-3 { transition-delay: 300ms; }
-.reveal-delay-4 { transition-delay: 400ms; }
-.reveal-delay-5 { transition-delay: 500ms; }
+.reveal-delay-1 { transition-delay: 80ms; }
+.reveal-delay-2 { transition-delay: 160ms; }
+.reveal-delay-3 { transition-delay: 240ms; }
+.reveal-delay-4 { transition-delay: 320ms; }
+.reveal-delay-5 { transition-delay: 400ms; }
 
 /* --- Focus States --- */
 :focus-visible {

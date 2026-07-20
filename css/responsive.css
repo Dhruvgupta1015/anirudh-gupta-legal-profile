@@ -2,14 +2,61 @@
    RESPONSIVE — Mobile-adaptive layouts
    ============================================================
    Breakpoints:
+   - 1440px: Large desktop
+   - 1280px: Standard desktop
    - 1200px: Standard laptop
    - 1024px: Tablet landscape
    - 768px: Tablet portrait
    - 480px: Mobile
+   - 414px: iPhone Plus / larger phones
+   - 390px: iPhone 14 / standard phones
    - 375px: Small mobile
+   - 360px: Android compact
    - 320px: Extreme small
    ============================================================ */
 
+/* --- Prevent horizontal overflow globally --- */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* --- Ensure all media fills containers without overflow --- */
+img, video, svg, iframe {
+  max-width: 100%;
+}
+
+/* ========================
+   1440px — Large desktop
+   ======================== */
+@media (max-width: 1440px) {
+  .hero__portrait-frame {
+    width: 400px;
+    height: 500px;
+  }
+}
+
+/* ========================
+   1280px — Standard desktop
+   ======================== */
+@media (max-width: 1280px) {
+  :root {
+    --section-pad: 8rem;
+  }
+
+  .hero__portrait-frame {
+    width: 380px;
+    height: 480px;
+  }
+
+  .hero__inner {
+    gap: var(--space-12);
+  }
+}
+
+/* ========================
+   1200px — Laptop
+   ======================== */
 @media (max-width: 1200px) {
   :root {
     --text-hero: 4.5rem;
@@ -24,6 +71,9 @@
   }
 }
 
+/* ========================
+   1024px — Tablet Landscape
+   ======================== */
 @media (max-width: 1024px) {
   :root {
     --text-hero: 3.5rem;
@@ -130,6 +180,9 @@
   }
 }
 
+/* ========================
+   768px — Tablet Portrait
+   ======================== */
 @media (max-width: 768px) {
   :root {
     --text-hero: 3rem;
@@ -177,6 +230,10 @@
   }
 
   /* Featured research */
+  .featured-research {
+    padding: var(--space-20) 0;
+  }
+
   .featured-research__headline {
     font-size: var(--text-3xl);
   }
@@ -190,8 +247,16 @@
   .contact-method {
     padding: var(--space-5) var(--space-6);
   }
+
+  /* Pillars mobile — generous stacked padding */
+  .pillars {
+    padding: var(--space-20) 0;
+  }
 }
 
+/* ========================
+   480px — Mobile
+   ======================== */
 @media (max-width: 480px) {
   :root {
     --text-hero: 2.5rem;
@@ -203,9 +268,35 @@
     --gutter: 1rem;
   }
 
+  .hero {
+    padding: var(--space-20) 0 var(--space-12);
+  }
+
   .hero__portrait-frame {
-    width: 140px;
-    height: 180px;
+    width: 160px;
+    height: 200px;
+  }
+
+  .hero__dossier-label {
+    margin-bottom: var(--space-4);
+  }
+
+  .hero__name {
+    margin-bottom: var(--space-4);
+  }
+
+  .hero__status {
+    margin-bottom: var(--space-4);
+    font-size: 0.6875rem;
+  }
+
+  .hero__tagline {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-4);
+  }
+
+  .hero__description {
+    margin-bottom: var(--space-6);
   }
 
   .hero__actions {
@@ -216,6 +307,8 @@
   .hero__actions .btn {
     width: 100%;
     justify-content: center;
+    /* Ensure minimum touch target */
+    min-height: 48px;
   }
 
   .hero__secondary-actions {
@@ -243,7 +336,11 @@
 
   .filter-pill {
     font-size: 11px;
-    padding: var(--space-1) var(--space-3);
+    padding: 6px var(--space-3);
+    /* Ensure minimum touch target height */
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
   }
 
   /* Publication entries stack fully */
@@ -257,6 +354,10 @@
   }
 
   /* Featured research */
+  .featured-research {
+    padding: var(--space-16) 0;
+  }
+
   .featured-research__decoration {
     display: none;
   }
@@ -271,6 +372,7 @@
     text-align: center;
     justify-content: center;
     padding: var(--space-4);
+    min-height: 48px;
   }
 
   .mobile-menu__link {
@@ -304,6 +406,9 @@
     flex-direction: column;
     text-align: center;
     gap: var(--space-3);
+    padding: var(--space-5) var(--space-4);
+    /* Ensure touch-friendly size */
+    min-height: 48px;
   }
 
   .contact-method__external {
@@ -314,10 +419,87 @@
   .site-footer__links {
     flex-wrap: wrap;
     justify-content: center;
+    gap: var(--space-4);
+  }
+
+  /* Section headers — less bottom margin */
+  .section__header {
+    margin-bottom: var(--space-10);
+  }
+
+  /* Credential entries */
+  .credential-entry {
+    padding: var(--space-4) 0;
+  }
+
+  /* Advocacy entries */
+  .advocacy-entry {
+    padding: var(--space-4) 0;
+  }
+
+  /* Contact heading */
+  .contact__heading {
+    font-size: var(--text-2xl);
   }
 }
 
-/* Small phones — iPhone SE, older devices */
+/* ========================
+   414px — iPhone Plus / Larger phones
+   ======================== */
+@media (max-width: 414px) {
+  .hero__portrait-frame {
+    width: 150px;
+    height: 190px;
+  }
+
+  /* Ensure experience cards don't crowd */
+  .experience-entry__meta {
+    gap: var(--space-2);
+  }
+
+  .advocacy-entry__footer {
+    gap: var(--space-2);
+  }
+}
+
+/* ========================
+   390px — iPhone 14 / Standard phones
+   ======================== */
+@media (max-width: 390px) {
+  :root {
+    --text-hero: 2.25rem;
+    --gutter: 0.875rem;
+  }
+
+  .hero__portrait-frame {
+    width: 140px;
+    height: 180px;
+  }
+
+  .hero__tagline {
+    font-size: var(--text-base);
+  }
+
+  /* Evidence cards — smaller text */
+  .evidence-card__value--text {
+    font-size: var(--text-sm);
+    letter-spacing: 0.02em;
+  }
+
+  .evidence-card__label {
+    font-size: 10px;
+  }
+
+  /* Contact email — prevent overflow */
+  .contact-method__value {
+    font-size: var(--text-base);
+    word-break: break-word;
+  }
+}
+
+/* ========================
+   375px — Small mobile (iPhone SE, older iPhones)
+   ======================== */
 @media (max-width: 375px) {
   :root {
     --text-hero: 2.25rem;
@@ -327,16 +509,11 @@
   }
 
   .hero__portrait-frame {
-    width: 120px;
-    height: 160px;
+    width: 130px;
+    height: 168px;
   }
 
   .hero__tagline {
-    font-size: var(--text-xl);
-  }
-
-  /* Evidence cards — smaller text */
-  .evidence-card__value--text {
     font-size: var(--text-base);
   }
 
@@ -352,6 +529,10 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding-bottom: var(--space-2);
+    margin-left: calc(-1 * var(--gutter));
+    margin-right: calc(-1 * var(--gutter));
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
   }
 
   .filter-bar::-webkit-scrollbar {
@@ -361,13 +542,57 @@
   .filter-pill {
     flex-shrink: 0;
   }
+
+  /* Publication title smaller */
+  .pub-entry__title {
+    font-size: var(--text-sm);
+  }
+
+  /* Leadership role smaller */
+  .leadership-entry__role {
+    font-size: var(--text-sm);
+  }
 }
 
-/* Extreme small — 320px */
-@media (max-width: 320px) {
+/* ========================
+   360px — Android compact
+   ======================== */
+@media (max-width: 360px) {
   :root {
     --text-hero: 2rem;
     --gutter: 0.75rem;
+  }
+
+  .hero__portrait-frame {
+    width: 120px;
+    height: 155px;
+  }
+
+  .hero__status {
+    font-size: 0.625rem;
+    letter-spacing: 0.12em;
+  }
+
+  /* Advocacy name smaller */
+  .advocacy-entry__name {
+    font-size: var(--text-base);
+  }
+
+  /* Credential entry text */
+  .credential-entry__title {
+    font-size: var(--text-sm);
+  }
+}
+
+/* ========================
+   320px — Extreme small
+   ======================== */
+@media (max-width: 320px) {
+  :root {
+    --text-hero: 1.875rem;
+    --text-5xl: 1.5rem;
+    --text-4xl: 1.25rem;
+    --gutter: 0.625rem;
   }
 
   .hero__portrait-frame {
@@ -376,22 +601,90 @@
   }
 
   .hero__status {
-    font-size: 0.6875rem;
-    letter-spacing: 0.12em;
+    font-size: 0.5625rem;
+    letter-spacing: 0.1em;
   }
 
-  /* Contact email — smaller font to avoid ugly fragmentation */
+  .hero__actions .btn {
+    font-size: 10px;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  /* Evidence cards — single column for extreme narrow */
+  .evidence__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .evidence-card {
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .evidence-card__value {
+    font-size: var(--text-xl);
+  }
+
+  .evidence-card__value--text {
+    font-size: var(--text-xs);
+  }
+
+  /* Contact email — smaller font to avoid fragmentation */
   .contact-method__value {
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
+    word-break: break-all;
   }
 
   /* Credential cards tighter */
   .credential-entry {
-    padding: var(--space-4);
+    padding: var(--space-3) 0;
+  }
+
+  /* Timeline tightest */
+  .timeline {
+    padding-left: var(--space-6);
+  }
+
+  .timeline__marker {
+    left: calc(-1 * var(--space-6));
+  }
+
+  .timeline__theme {
+    font-size: var(--text-base);
+  }
+
+  /* Filter pills — smallest text */
+  .filter-pill {
+    font-size: 10px;
+    padding: 4px var(--space-2);
+    min-height: 32px;
+  }
+
+  /* Publication index smaller */
+  .pub-entry__index {
+    font-size: var(--text-base);
+    min-width: 28px;
   }
 
   /* Section header tighter */
   .section__header {
-    margin-bottom: var(--space-10);
+    margin-bottom: var(--space-8);
+  }
+
+  /* Mobile menu links smaller */
+  .mobile-menu__link {
+    font-size: var(--text-lg);
+  }
+
+  /* Footer tighter */
+  .site-footer {
+    padding: var(--space-10) 0;
+  }
+
+  .site-footer__links {
+    gap: var(--space-3);
+  }
+
+  .site-footer__link {
+    font-size: var(--text-xs);
   }
 }

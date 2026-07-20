@@ -84,8 +84,8 @@
   display: none;
   flex-direction: column;
   gap: 5px;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -93,7 +93,9 @@
   background: transparent;
   border: none;
   padding: 0;
-  margin-right: -8px; /* Offset the extra padding for alignment */
+  margin-right: -8px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-menu-btn span {
@@ -545,8 +547,11 @@
   justify-content: space-between;
   padding: var(--space-5) var(--space-6);
   cursor: pointer;
-  transition: background-color var(--duration-fast);
+  transition: background-color var(--duration-base) var(--ease-out);
   gap: var(--space-3);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 48px;
 }
 
 .pillars__stacked-header:hover {
@@ -732,7 +737,7 @@
   gap: var(--space-4);
 }
 
-/* --- Contact Method --- */
+/* --- Contact Method (in sections context) --- */
 .contact-method {
   display: flex;
   align-items: center;
