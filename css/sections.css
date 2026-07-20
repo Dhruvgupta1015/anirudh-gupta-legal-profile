@@ -403,7 +403,7 @@
 /* --- THREE PILLARS --- */
 .pillars {
   padding: var(--space-32) 0;
-  overflow: hidden;
+  overflow: visible; /* Prevent clipping of the panel */
 }
 
 .pillars__header {
@@ -416,6 +416,7 @@
   max-width: 700px;
   margin: 0 auto;
   aspect-ratio: 1 / 0.85;
+  margin-bottom: var(--space-24); /* Make room for absolute panel below */
 }
 
 .pillars__svg {
@@ -475,7 +476,7 @@
 
 .pillars__evidence-panel {
   position: absolute;
-  bottom: -20px;
+  top: calc(100% - 20px);
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -488,12 +489,13 @@
   opacity: 0;
   visibility: hidden;
   transition: all var(--duration-base) var(--ease-out);
+  z-index: 10;
 }
 
 .pillars__evidence-panel.visible {
   opacity: 1;
   visibility: visible;
-  bottom: -40px;
+  top: 100%;
 }
 
 .pillars__evidence-title {
@@ -667,15 +669,19 @@
 }
 
 .advocacy__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-6);
+  column-count: 2;
+  column-gap: var(--space-6);
+  display: block;
 }
 
 .advocacy-entry {
   padding: var(--space-6) 0;
   border-bottom: var(--border-subtle);
   transition: opacity var(--duration-fast) var(--ease-out);
+  break-inside: avoid;
+  page-break-inside: avoid;
+  display: inline-block;
+  width: 100%;
 }
 
 .advocacy-entry:hover {

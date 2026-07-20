@@ -33,19 +33,17 @@ export function initJourney() {
         if (exp.id === 12) {
           customImagesHtml = `
             <div class="institutional-strip">
-              <img src="/assets/images/regulatory-cci-standing.jpg" alt="Anirudh Gupta standing at the Competition Commission of India" loading="lazy" width="800" height="1200">
-              <div class="institutional-strip-col-right">
-                <img src="/assets/images/regulatory-cci-podium.jpg" alt="Anirudh Gupta at CCI podium" loading="lazy" width="600" height="400">
-                <img src="/assets/images/regulatory-cci-group.jpg" alt="CCI internship group photo" loading="lazy" width="600" height="400">
-                <img src="/assets/images/regulatory-cci-certificate.jpg" alt="Anirudh Gupta receiving CCI certificate" loading="lazy" width="600" height="400">
-              </div>
+              <img src="/images/regulatory-cci-standing.jpg" alt="Anirudh Gupta standing at the Competition Commission of India" loading="lazy" width="800" height="1200">
+              <img src="/images/regulatory-cci-podium.jpg" alt="Anirudh Gupta at CCI podium" loading="lazy" width="600" height="400">
+              <img src="/images/regulatory-cci-group.jpg" alt="CCI internship group photo" loading="lazy" width="600" height="400">
+              <img src="/images/regulatory-cci-certificate.jpg" alt="Anirudh Gupta receiving CCI certificate" loading="lazy" width="600" height="400">
             </div>
             <div class="editorial-caption" style="margin-bottom:var(--space-6);">Regulatory internship exposure at the Competition Commission of India</div>
           `;
         } else if (exp.id === 13) {
           customImagesHtml = `
             <div class="editorial-figure">
-              <img src="/assets/images/regulatory-sebi.jpg" alt="Anirudh Gupta at SEBI" loading="lazy" width="800" height="600">
+              <img src="/images/regulatory-sebi.jpg" alt="Anirudh Gupta at SEBI" loading="lazy" width="800" height="600">
               <div class="editorial-caption">Regulatory exposure and legal research at the Securities and Exchange Board of India</div>
             </div>
           `;
