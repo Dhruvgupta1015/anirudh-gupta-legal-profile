@@ -692,3 +692,94 @@ img, video, svg, iframe {
     font-size: var(--text-xs);
   }
 }
+
+/* ========================
+   CREDENTIAL CARDS — Responsive
+   ======================== */
+
+/* 768px — Cards stack vertically */
+@media (max-width: 768px) {
+  .credential-card {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .credential-card__preview {
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .cert-lightbox__inner {
+    padding: var(--space-6);
+  }
+
+  .cert-lightbox__close {
+    top: var(--space-4);
+    right: var(--space-4);
+  }
+}
+
+/* 480px — Tighter card spacing */
+@media (max-width: 480px) {
+  .credential-card {
+    padding: var(--space-6) 0;
+    gap: var(--space-4);
+  }
+
+  .credential-card__preview {
+    max-width: 240px;
+  }
+
+  .credential-card__title {
+    font-size: var(--text-sm);
+  }
+
+  .cert-lightbox__inner {
+    padding: var(--space-4);
+  }
+
+  .cert-lightbox__img-container {
+    max-width: 96vw;
+    max-height: 85vh;
+  }
+
+  .cert-lightbox__img {
+    max-height: 85vh;
+  }
+
+  .cert-lightbox__hint {
+    font-size: 10px;
+  }
+}
+
+/* 375px — Smaller previews */
+@media (max-width: 375px) {
+  .credential-card__preview {
+    max-width: 200px;
+  }
+
+  .credential-card__description {
+    font-size: var(--text-xs);
+  }
+}
+
+/* 320px — Minimum viable */
+@media (max-width: 320px) {
+  .credential-card__preview {
+    max-width: 160px;
+  }
+
+  .credential-card__action {
+    font-size: 10px;
+    padding: var(--space-2);
+  }
+
+  .cert-lightbox__inner {
+    padding: var(--space-2);
+  }
+
+  .cert-lightbox__hint {
+    display: none;
+  }
+}
