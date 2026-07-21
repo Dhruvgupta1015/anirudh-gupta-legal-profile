@@ -10,6 +10,7 @@
   right: 0;
   z-index: var(--z-header);
   padding: var(--space-5) 0;
+  border-bottom: 1px solid transparent;
   transition: all var(--duration-base) var(--ease-out);
   background-color: transparent;
 }
@@ -214,7 +215,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: var(--space-32) 0 var(--space-20);
+  padding: var(--space-32) 0;
   position: relative;
   overflow: hidden;
 }
@@ -366,7 +367,7 @@
 
 /* --- PROFILE SECTION --- */
 .profile {
-  padding: var(--space-20) 0;
+  padding: var(--space-32) 0;
   border-top: var(--border-subtle);
 }
 
