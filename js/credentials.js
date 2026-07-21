@@ -54,7 +54,19 @@ export function initCredentials() {
   document.querySelectorAll('[data-cert-src]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const src = btn.getAttribute('data-cert-src');
+      
+      let src = btn.getAttribute('data-cert-src');
+      const card = btn.closest('.credential-card');
+      
+      // Fix for production: read src directly from the resolved <img> tag 
+      // since Vite hashes the actual asset but ignores data-* attributes by default.
+      if (card) {
+        const img = card.querySelector('.credential-card__preview img');
+        if (img && img.src) {
+          src = img.src;
+        }
+      }
+
       const alt = btn.getAttribute('data-cert-alt') || 'Certificate';
       openLightbox(src, alt);
     });
